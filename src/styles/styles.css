@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0b131e;
+}
+
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  padding: 20px;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* ########## Search #######
+   ######################### */
+
+form {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  width: 89%;
+  background-color: #202b3b;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 10px 8px;
+  color: white;
+}
+
+.search::placeholder {
+  color: #cccfd5;
+}
+
+button {
+  width: 10%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 6px;
+  background-color: #202b3b;
+  color: rgb(211, 211, 211);
+}
+
+/* ########## Result #######
+   ######################### */
+
+.result {
+  color: rgb(211, 211, 211);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ########## Main temp #######
+   ############################ */
+
+.today-forecast-result {
+  width: 60%;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+  color: rgb(231, 231, 231);
+}
+
+.city .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.city .city-name h1 {
+  margin-bottom: 5px;
+}
+
+.city .main-temperature {
+  font-size: 50px;
+}
+
+.city img {
+  width: 150px;
+}
+
+.gray {
+  color: #9399a2;
+}
+
+/* ########## Today's forecast #######
+   ################################### */
+
+.today {
+  padding: 0 30px;
+  background-color: #202b3b;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.today-heading {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.today-forecast-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.today-time-weather {
+  padding: 0 50px;
+  border-right: 1px solid rgb(71, 71, 71);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.today-time-weather:last-child {
+  border-right: 0px;
+}
+
+img {
+  width: 80px;
+}
+
+.today-time-heading {
+  font-weight: 700;
+}
+
+/* ########## Air conditions #######
+   ################################# */
+
+.air-condition {
+  margin: 10px 0;
+  padding: 30px 30px 0px 30px;
+  background-color: #202b3b;
+  border-radius: 30px;
+}
+
+.air-condition-heading {
+  font-weight: 700;
+}
+
+.air-condition-elements {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.air-element {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.air-element .heading {
+  font-weight: 300;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.air-element .num {
+  font-size: 30px;
+}
+
+/* ########## 7-day forecast #######
+   ################################# */
+
+.week-forecast-result {
+  width: 35%;
+  background-color: #202b3b;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.week-forecast-heading {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.week-day {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(71, 71, 71);
+}
+
+.week-day:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.day-name {
+  width: 33%;
+}
+
+.day-weather {
+  font-weight: 600;
+}
+
+.week-day img {
+  width: 40px;
+}
+
+.image-weather {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.week-day-temp {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 
+######### Responsive ########
+#############################
+ */
+
+@media screen and (max-width: 1450px) {
+  form {
+    width: 100%;
+  }
+
+  .result {
+    flex-direction: column;
+  }
+
+  .today-forecast-result {
+    width: 100%;
+  }
+
+  .air-condition-elements {
+    padding: 0 0 0 100px;
+  }
+
+  .week-forecast-result {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .today-forecast-container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .today-time-weather {
+    width: 47%;
+  }
+
+  .today-time-weather:nth-child(2) {
+    border: none;
+  }
+
+  .air-condition-elements {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    justify-content: none;
+  }
+
+  form button {
+    width: 100px;
+  }
+
+  .today-time-weather {
+    width: 30%;
+    border: none;
+  }
+
+  .air-condition-elements {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 40px;
+  }
+
+  .air-element {
+    width: 100%;
+  }
+
+  .city {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 20px 5px;
+    }
+
+    .city img {
+        width: 100px;
+        height: 100px;
+    }
+}
